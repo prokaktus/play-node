@@ -1,0 +1,12 @@
+v0.1:
+ ☐ set up hapijs
+ ☐ set up postgres (user data)
+ ☐ set up redis (cache)
+ ☐ frontpage
+ ☐ aboutpage
+ ☐ login
+ ☐ reactjs on frontend
+ ☐ redux-router (assumed as SPA)
+ ☐ redux
+ ☐ webpack for frontend bundle
+ ☐ hot reloading

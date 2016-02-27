@@ -1,0 +1,18 @@
+Post:
+ ☐ content (use markdown for markup posts)
+ ☐ posts rating (number likes/dislikes)
+ ☐ tags
+
+Site functional:
+ ☐ show online activity on site
+ ☐ 
+
+========
+Infrastructure
+devops:
+  ☐ containers
+    ☐ node server
+    ☐ db server mongo
+    ☐ db server redis
+    ☐ nginx
+    ☐ elasticsearch
