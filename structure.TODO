@@ -5,7 +5,10 @@ Post:
 
 Site functional:
  ☐ show online activity on site
- ☐ 
+
+ShouldBeCool:
+  ☐ text search provided by elasticsearch
+  ☐ metrics by influxdb
 
 ========
 Infrastructure

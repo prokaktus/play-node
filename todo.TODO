@@ -10,3 +10,8 @@ v0.1:
  ☐ redux
  ☐ webpack for frontend bundle
  ☐ hot reloading
+ ☐ setup linter
+ ☐ setup postcss
+   ☐ autoprefixer
+ ☐ setup logging
+ ☐ handlebars views (?)

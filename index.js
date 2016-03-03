@@ -1,6 +1,18 @@
 'use strict';
 
+// setup loggers
+require('./lib/setup_logger')();
+var logger = require('./lib/get_logger')();
+
 const Hapi = require('hapi');
+
+
+require('dotenv').config();
+
+require('./lib/start')();
+
+logger.log('info', 'Hi');
+
 
 const server = new Hapi.Server();
 server.connection({port: 3000});
