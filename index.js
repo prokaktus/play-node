@@ -2,9 +2,9 @@
 
 // setup loggers
 require('./lib/setup_logger')();
-var logger = require('./lib/get_logger')('default', __filename);
-
-const Koa = require('koa');
+const logger = require('./lib/get_logger')('default', __filename);
+const raven = require('raven');
+const express = require('express');
 
 
 require('dotenv').config();
@@ -13,18 +13,13 @@ require('./lib/start')();
 
 logger.log('info', 'Hi');
 
-const app = Koa();
+const app = express();
+const port = process.env.PORT;
 
-app.listen(3000);
+app.get('/', function (req, res) {
+    res.send('Hello world!');
+})
 
-app.use(function *(next) {
-    yield next;
-});
-
-app.use(function *() {
-    this.body = 'Hello world';
-});
-
-app.on('error', function (err, ctx) {
-    console.log("Aaa! Error");
+app.listen(port, function () {
+    logger.info('Start listen on port ' + port);
 });
