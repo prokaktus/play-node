@@ -2,9 +2,9 @@
 
 // setup loggers
 require('./lib/setup_logger')();
-var logger = require('./lib/get_logger')();
+var logger = require('./lib/get_logger')('default', __filename);
 
-const Hapi = require('hapi');
+const Koa = require('koa');
 
 
 require('dotenv').config();
@@ -13,30 +13,18 @@ require('./lib/start')();
 
 logger.log('info', 'Hi');
 
+const app = Koa();
 
-const server = new Hapi.Server();
-server.connection({port: 3000});
+app.listen(3000);
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello World!');
-    }
+app.use(function *(next) {
+    yield next;
 });
 
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-    }
+app.use(function *() {
+    this.body = 'Hello world';
 });
 
-server.start((err) => {
-    if (err) {
-        throw err;
-    }
-
-    console.log('Server starting at:', server.info.uri);
+app.on('error', function (err, ctx) {
+    console.log("Aaa! Error");
 });
