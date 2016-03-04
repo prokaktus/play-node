@@ -3,6 +3,6 @@ Play with nodejs, etc.
 
 It's just sample project.
 
-[Functional](todo.TODO)
+[To-do](todo.TODO)
 
-[Technology stack](structure.TODO)
+[Implementation/tech stack/notes](structure.TODO)

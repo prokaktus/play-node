@@ -1,5 +1,5 @@
 v0.1:
- ☐ set up hapijs
+ ☐ set up koa
  ☐ set up postgres (user data)
  ☐ set up redis (cache)
  ☐ frontpage
