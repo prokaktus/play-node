@@ -1,5 +1,5 @@
-# play-koa
-Play with nodejs, etc.
+# play-node
+Play with nodejs, express, etc.
 
 It's just sample project.
 

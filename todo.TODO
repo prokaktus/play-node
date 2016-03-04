@@ -1,9 +1,10 @@
 v0.1:
- ☐ set up koa
+ ☐ set up express
  ☐ set up postgres (user data)
  ☐ set up redis (cache)
  ☐ frontpage
  ☐ aboutpage
+ ☐ layout adaptive template
  ☐ login
  ☐ reactjs on frontend
  ☐ redux-router (assumed as SPA)
