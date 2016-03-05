@@ -1,18 +1,19 @@
 v0.1:
- ☐ set up express
+ ✔ set up express @done (16-03-05 05:50)
+ ☐ webpack for frontend bundle
+ ☐ reactjs on frontend
+ ☐ redux-router (assumed as SPA)
+ ☐ redux
+ ☐ set up linter
+ ☐ set up basic tests 
  ☐ set up postgres (user data)
  ☐ set up redis (cache)
  ☐ frontpage
  ☐ aboutpage
  ☐ layout adaptive template
  ☐ login
- ☐ reactjs on frontend
- ☐ redux-router (assumed as SPA)
- ☐ redux
- ☐ webpack for frontend bundle
  ☐ hot reloading
- ☐ setup linter
  ☐ setup postcss
    ☐ autoprefixer
- ☐ setup logging
- ☐ handlebars views (?)
+ ✔ setup logging @done (16-03-05 06:03)
+ ✔ handlebars views (?) @done (16-03-05 21:55)

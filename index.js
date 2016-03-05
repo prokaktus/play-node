@@ -3,9 +3,7 @@
 const path = require('path');
 const express = require('express');
 const raven = require('raven');
-const hbs = require('hbs');
-const layouts = require('handlebars-layouts');
-const handlebars = require('handlebars');
+const hbs = require('express-handlebars');
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -21,11 +19,15 @@ logger.log('info', 'Hi');
 
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'frontend', 'views'));
+app.engine('.hbs', hbs({
+    defaultLayout: 'main',
+    extname: '.hbs',
+    layoutsDir: path.join(__dirname, 'frontend', 'views', 'layouts'),
+    partialsDir: path.join(__dirname, 'frontend', 'views', 'partials')
+}));
 
-hbs.registerHelper(layouts(handlebars));
-hbs.registerPartials(path.join(__dirname, 'frontend', 'views', 'partials'));
+app.set('view engine', '.hbs');
+app.set('views', path.join(__dirname, 'frontend', 'views'));
 
 app.use('/static', express.static('public'));
 app.get('/', function (req, res) {
