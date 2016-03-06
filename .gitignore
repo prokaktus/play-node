@@ -40,3 +40,5 @@ node_modules
 # sftp configuration file
 sftp-config.json
 .env
+build/
+public/*bundle.js*

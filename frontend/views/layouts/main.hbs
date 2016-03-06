@@ -9,4 +9,9 @@
 <body>
     {{{body}}}
 </body>
+{{#if production}}
+    <script src="static/app.bundle.js"></script>
+{{else}}
+    <script src="http://localhost:3001/static/app.bundle.js"></script>
+{{/if}}
 </html>

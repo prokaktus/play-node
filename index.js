@@ -4,10 +4,12 @@ const path = require('path');
 const express = require('express');
 const raven = require('raven');
 const hbs = require('express-handlebars');
+const Immutable = require('immutable');
 
 require('dotenv').config();
 const PORT = process.env.PORT;
-
+const PRODUCTION = process.env.PRODUCTION === 'True';
+const defaultRender = Immutable.Map({production: PRODUCTION});
 
 // setup loggers
 require('./lib/setup_logger')();
@@ -31,12 +33,8 @@ app.set('views', path.join(__dirname, 'frontend', 'views'));
 
 app.use('/static', express.static('public'));
 app.get('/', function (req, res) {
-    res.send('Hello world!');
+    res.render('index', defaultRender);
 });
-
-app.get('/hbs', function (req, res) {
-    res.render('index');
-})
 
 app.listen(PORT, function () {
     logger.info('Start listen on port ' + PORT);
