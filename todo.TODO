@@ -1,19 +1,26 @@
-v0.1:
+sprint1:
  ✔ set up express @done (16-03-05 05:50)
- ☐ webpack for frontend bundle
- ☐ reactjs on frontend
+ ✔ webpack for frontend bundle @done (16-03-07 04:12)
+ ✔ reactjs on frontend @done (16-03-07 04:12)
+ ✔ hot reloading @done (16-03-07 04:13)
+ ✔ setup postcss @done (16-03-07 04:13)
+   ✔ autoprefixer @done (16-03-07 04:13)
+ ☐ set up mongodb (user data) (later switch to postgres)
+ ☐ set up linter
  ☐ redux-router (assumed as SPA)
  ☐ redux
- ☐ set up linter
  ☐ set up basic tests 
- ☐ set up postgres (user data)
  ☐ set up redis (cache)
  ☐ frontpage
  ☐ aboutpage
  ☐ layout adaptive template
  ☐ login
- ☐ hot reloading
- ☐ setup postcss
-   ☐ autoprefixer
+ ☐ page with list all posts
  ✔ setup logging @done (16-03-05 06:03)
  ✔ handlebars views (?) @done (16-03-05 21:55)
+
+sprint2:
+
+
+
+sprint3:
